@@ -8,7 +8,7 @@ const AddTaskForm = () => {
     const [errmsg, setErrorMessgae] = useState('')
     const [priority, setPriority] = useState('')
     const [status, setStatus] = useState('')
-    const [dueDate, setDueDate] = useState(null)
+    const [dueDate, setDueDate] = useState('')
 
     const handlePriority = async (e) => {
         setPriority(e.target.value)
@@ -35,6 +35,9 @@ const AddTaskForm = () => {
             console.log(response)
             setTitle('')
             setDescription('')
+            setPriority('')
+            setStatus('')
+            setDueDate('')
 
         } catch (error) {
             const message = error.response?.data?.error || "An unknown error has occoured"
@@ -47,7 +50,7 @@ const AddTaskForm = () => {
     const labelStyle = "text-sm font-medium text-gray-300"
 
     return (
-        <div className="mx-50 p-6 bg-gray-900 text-white rounded-lg my-6">
+        <div className="m-15 p-6 bg-gray-900 text-white rounded-lg border-2 border-solid">
             <form onSubmit={handleSubmit} className="space-y-5">
                 <h3 className="border-b border-gray-700 pb-2">Add a New Task</h3>
                 

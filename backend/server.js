@@ -17,6 +17,12 @@ app.use(express.json())
 app.use('/api/tasks/', taskRoutes)
 app.use('/api/assignees/', assigneeRoutes)
 
+app.use((req, res, next) => {
+    console.log(req.path, req.method)
+    next()
+})
+
+
 mongoose.connect(process.env.DB_CONN)
     .then(() => {
         app.listen(process.env.PORT, () => {
