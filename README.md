@@ -44,3 +44,9 @@ Due to personal time constraints the final product could further be optimised/im
     <li>Show the selected assignees before saving them on a task</li>
     <li>Re-design the frontend to support create a more intuitive user experience and align it with accessibility guidelines</li>
 </ul>
+
+## Hosting
+<ul>
+    <li>Backend: Hosted using Render free tier (might need to wait for data due to this)</li>
+    <li>Frontend: Hosted using Vercel</li>
+</ul>
