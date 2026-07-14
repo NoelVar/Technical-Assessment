@@ -28,7 +28,7 @@ const Tasks = ({ task }) => {
     useEffect(() => {
         const getAssignees = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/assignees/')
+                const response = await axios.get('https://task-management-kwre.onrender.com/api/assignees/')
                 setAllAssignees(response.data)
             } catch (err) {
                 console.error(err)
@@ -68,7 +68,7 @@ const Tasks = ({ task }) => {
 
         try {
             await axios.patch(
-                'http://localhost:4000/api/tasks/update', 
+                'https://task-management-kwre.onrender.com/api/tasks/update', 
                 {
                     id,
                     title,

@@ -16,7 +16,7 @@ const Main = () => {
         const getTasks = async () => {
             setLoading(true);
             try {
-                const response = await axios.get('http://localhost:4000/api/tasks/')
+                const response = await axios.get('https://task-management-kwre.onrender.com/api/tasks/')
                 setTasks(response.data)
             } catch (err) {
                 console.error(err)
