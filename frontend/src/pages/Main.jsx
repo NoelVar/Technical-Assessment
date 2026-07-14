@@ -47,8 +47,8 @@ const Main = () => {
                             </Spinner>  
                         </div>  
                     }
-                    {error && <p>Couln't get data</p> }
-                    {todoTasks && 
+                    {error && <p className="text-white">Couln't get data</p> }
+                    {todoTasks && !error &&
                         <div className={ taskBox }>
                             <h2 className="text-center">To Do</h2>
                             {todoTasks.map((task) => (
@@ -59,7 +59,7 @@ const Main = () => {
                         </div>
                     }
 
-                    {inProgressTasks && 
+                    {inProgressTasks && !error &&
                         <div className={ taskBox }>
                             <h2 className="text-center">In Progress</h2>
                             {inProgressTasks.map((task) => (
@@ -69,7 +69,7 @@ const Main = () => {
                             ))}
                         </div>
                     }
-                    {doneTasks &&
+                    {doneTasks && !error &&
                         <div className={ taskBox }>
                             <h2 className="text-center">Done</h2>
                             {doneTasks.map((task) => (

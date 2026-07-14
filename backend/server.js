@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express()
 
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://taskmanagementassessment.vercel.app/']
+    origin: ['http://localhost:5173', 'https://taskmanagementassessment.vercel.app']
 };
 
 app.use(cors(corsOptions));
