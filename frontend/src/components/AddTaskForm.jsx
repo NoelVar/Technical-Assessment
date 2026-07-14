@@ -39,6 +39,10 @@ const AddTaskForm = () => {
             setStatus('')
             setDueDate('')
 
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000);
+
         } catch (error) {
             const message = error.response?.data?.error || "An unknown error has occoured"
             setErrorMessgae(message)
